@@ -281,14 +281,6 @@
 		
 		<profile>
 			<id>ci</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>ci</value>
-				</property>
-				<file>
-				</file>
-			</activation>
 			<build>
 				<resources>
 				</resources>
