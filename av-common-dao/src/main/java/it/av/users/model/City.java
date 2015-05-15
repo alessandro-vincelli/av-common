@@ -1,9 +1,10 @@
 package it.av.users.model;
 
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.ForeignKey;
 
 /**
  * countries
@@ -19,7 +20,7 @@ public class City extends BasicEntity implements Comparable<City> {
     public static final String COUNTRY_FIELD = "country";
 
     @ManyToOne(optional = false)
-    @ForeignKey(name = "city_to_country_fk")
+    @JoinColumn(foreignKey = @ForeignKey(name = "city_to_country_fk"))
     private Country country;
     private String nameSimplified;
     private String name;

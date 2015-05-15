@@ -1,28 +1,20 @@
 package it.av.users.model;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
+import javax.persistence.ForeignKey;
+import javax.persistence.Index;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 import javax.persistence.Version;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.ForeignKey;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
@@ -32,9 +24,8 @@ import org.hibernate.search.annotations.Store;
  * 
  */
 @Entity
-@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "email" }) })
+@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "email" }) }, indexes = { @Index(name = "idx_user_id", columnList = "id") })
 @Indexed
-@org.hibernate.annotations.Table(appliesTo = "users", indexes = { @org.hibernate.annotations.Index(name = "idx_user_id", columnNames = { "id" }) })
 @XmlRootElement
 public class User extends BasicEntity implements Comparable<User> {
 
@@ -95,10 +86,10 @@ public class User extends BasicEntity implements Comparable<User> {
     private boolean blocked;
 
     @ManyToOne(optional = false)
-    @ForeignKey(name = "user_to_language_fk")
+    @JoinColumn(foreignKey = @ForeignKey(name = "user_to_language_fk"))
     private Language language;
     @ManyToOne(optional = false)
-    @ForeignKey(name = "user_to_profile_fk")
+    @JoinColumn(foreignKey = @ForeignKey(name = "user_to_profile_fk"))
     //@IndexedEmbedded
     private UserProfile userProfile;
     @Version

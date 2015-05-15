@@ -274,9 +274,28 @@
 				</resources>
 			</build>
 			<properties>
-				<wicketApplication.configurationType>development</wicketApplication.configurationType>
 				<springPropertiesLocation>file:/Users/alessandro/dev-apps/properties/av-common-dao.properties</springPropertiesLocation>
                 <springPropertiesLocationTest>file:/Users/alessandro/dev-apps/properties/av-common-dao.properties</springPropertiesLocationTest>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>ci</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>ci</value>
+				</property>
+				<file>
+				</file>
+			</activation>
+			<build>
+				<resources>
+				</resources>
+			</build>
+			<properties>
+				<springPropertiesLocation>file:/etc/properties/av-common-dao.properties</springPropertiesLocation>
+                <springPropertiesLocationTest>file:/etc/properties/av-common-dao.properties</springPropertiesLocationTest>
 			</properties>
 		</profile>
 	</profiles>
