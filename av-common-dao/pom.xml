@@ -278,6 +278,7 @@
                 <springPropertiesLocationTest>file:/Users/alessandro/dev-apps/properties/av-common-dao.properties</springPropertiesLocationTest>
 			</properties>
 		</profile>
+
 		
 		<profile>
 			<id>ci</id>
