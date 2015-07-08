@@ -1,7 +1,7 @@
 package it.av.web.common.rest.controller;
 
-import it.av.users.dao.UserDao;
-import it.av.users.model.User;
+import it.av.apps.dao.UserDao;
+import it.av.apps.model.User;
 
 import java.util.List;
 

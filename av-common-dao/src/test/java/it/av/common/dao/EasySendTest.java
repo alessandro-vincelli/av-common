@@ -1,9 +1,9 @@
 package it.av.common.dao;
 
-import it.av.users.dao.LanguageDao;
-import it.av.users.dao.UserProfileDao;
-import it.av.users.model.Language;
-import it.av.users.model.UserProfile;
+import it.av.apps.dao.LanguageDao;
+import it.av.apps.dao.UserProfileDao;
+import it.av.apps.model.Language;
+import it.av.apps.model.UserProfile;
 
 import java.util.Collection;
 import java.util.List;

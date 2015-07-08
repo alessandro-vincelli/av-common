@@ -1,6 +1,6 @@
-package it.av.users.dao;
+package it.av.apps.dao;
 
-import it.av.users.model.Language;
+import it.av.apps.model.Language;
 
 public interface LanguageDao extends GenericDAO<Language> {
 

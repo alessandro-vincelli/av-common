@@ -1,4 +1,4 @@
-package it.av.users.dao;
+package it.av.apps.dao;
 
 import java.util.List;
 

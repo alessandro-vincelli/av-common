@@ -1,7 +1,7 @@
-package it.av.users.dao;
+package it.av.apps.dao;
 
+import it.av.apps.model.BasicEntity;
 import it.av.common.exception.GenericException;
-import it.av.users.model.BasicEntity;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;

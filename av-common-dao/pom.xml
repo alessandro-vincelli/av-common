@@ -3,7 +3,7 @@
   <groupId>it.av.users</groupId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <artifactId>users-manager</artifactId>
+  <artifactId>av-common-dao</artifactId>
   
   <dependencies>
   

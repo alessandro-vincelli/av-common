@@ -1,6 +1,6 @@
-package it.av.users.dao;
+package it.av.apps.dao;
 
-import it.av.users.model.UserProfile;
+import it.av.apps.model.UserProfile;
 
 import java.util.List;
 

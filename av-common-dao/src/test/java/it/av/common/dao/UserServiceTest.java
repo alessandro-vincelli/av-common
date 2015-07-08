@@ -3,8 +3,8 @@ package it.av.common.dao;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import it.av.users.dao.UserDao;
-import it.av.users.model.User;
+import it.av.apps.dao.UserDao;
+import it.av.apps.model.User;
 
 import java.util.Collection;
 

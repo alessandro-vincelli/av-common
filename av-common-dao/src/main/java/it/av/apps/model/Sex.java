@@ -1,4 +1,4 @@
-package it.av.users.model;
+package it.av.apps.model;
 
 /**
  * @author Alessandro Vincelli

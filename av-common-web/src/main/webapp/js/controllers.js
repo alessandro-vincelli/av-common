@@ -14,7 +14,22 @@ function MainCtrl() {
 
 };
 
+function LoginCtrl($scope) {
+
+    this.userName2 = 'Example user2';
+    
+    
+    /* message on eventClick */
+    $scope.login = function(  ){
+    	alert("dsdd");
+        $scope.alertMessage = (event.title + ': Clicked ');
+    };
+    
+
+};
+
 
 angular
     .module('inspinia')
     .controller('MainCtrl', MainCtrl)
+    .controller('LoginCtrl', LoginCtrl)

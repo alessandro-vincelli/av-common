@@ -1,4 +1,4 @@
-package it.av.users.model;
+package it.av.apps.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Index;

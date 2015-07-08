@@ -77,11 +77,11 @@
     </bean>
     
     
-    <bean id="userDao" class="it.av.users.dao.UserDaoJpa"/>
+    <bean id="userDao" class="it.av.apps.dao.UserDaoJpa"/>
     
-    <bean id="languageDao" class="it.av.users.dao.LanguageDaoJpa"/>
+    <bean id="languageDao" class="it.av.apps.dao.LanguageDaoJpa"/>
     
-    <bean id="userProfileDao" class="it.av.users.dao.UserProfileDaoJpa"/>
+    <bean id="userProfileDao" class="it.av.apps.dao.UserProfileDaoJpa"/>
         
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename" value="classpath:it/av/es/web/WicketApplication" />

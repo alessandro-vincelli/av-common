@@ -1,8 +1,8 @@
-package it.av.users.dao;
+package it.av.apps.dao;
 
+import it.av.apps.model.User;
 import it.av.common.exception.GenericException;
 import it.av.common.utils.DateUtil;
-import it.av.users.model.User;
 
 import java.util.Collection;
 import java.util.List;
