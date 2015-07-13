@@ -294,8 +294,8 @@
 	</profiles>
   
   	<properties>
-		<jdk.version>1.7</jdk.version>
-        <spring.version>4.1.6.RELEASE</spring.version>
+		<jdk.version>1.8</jdk.version>
+        <spring.version>4.1.7.RELEASE</spring.version>
         <spring.security.version>4.0.1.RELEASE</spring.security.version>
         <jstl.version>1.2</jstl.version>
         <junit.version>4.11</junit.version>

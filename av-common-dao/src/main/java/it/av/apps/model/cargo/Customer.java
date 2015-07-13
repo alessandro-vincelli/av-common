@@ -1,10 +1,15 @@
 package it.av.apps.model.cargo;
 
-import it.av.apps.model.BasicEntity;
-
 import javax.persistence.Entity;
 import javax.persistence.Index;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.search.annotations.IndexedEmbedded;
+
+import it.av.apps.model.BasicEntity;
+import it.av.apps.model.City;
+import it.av.apps.model.Country;
 
 @Entity
 @Table(name = "customers", indexes = { @Index(name = "idx_customers_companyName", columnList = "companyName") })
@@ -17,8 +22,12 @@ public class Customer extends BasicEntity {
     private String companyName;
     private String companyName2;
     private String address;
-    private String country;
-    private String city;
+    @ManyToOne
+    private Country country;
+    @IndexedEmbedded
+    @ManyToOne
+    private City city;
+    private String province;
     private String type;
     private String languague;
     private String currency;
@@ -48,17 +57,24 @@ public class Customer extends BasicEntity {
     public void setAddress(String address) {
         this.address = address;
     }
-    public String getCountry() {
+
+    public Country getCountry() {
         return country;
     }
-    public void setCountry(String country) {
+    public void setCountry(Country country) {
         this.country = country;
     }
-    public String getCity() {
+    public City getCity() {
         return city;
     }
-    public void setCity(String city) {
+    public void setCity(City city) {
         this.city = city;
+    }
+    public String getProvince() {
+        return province;
+    }
+    public void setProvince(String province) {
+        this.province = province;
     }
     public String getType() {
         return type;

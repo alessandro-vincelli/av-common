@@ -83,6 +83,10 @@
     <bean id="userProfileDao" class="it.av.apps.dao.UserProfileDaoJpa"/>
     
     <bean id="customerDao" class="it.av.apps.dao.cargo.CustomerDaoJpa"/>
+    
+    <bean id="cityDao" class="it.av.apps.dao.CityDaoJpa"/>
+    
+    <bean id="countryDao" class="it.av.apps.dao.CountryDaoJpa"/>
         
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename" value="classpath:it/av/es/web/WicketApplication" />

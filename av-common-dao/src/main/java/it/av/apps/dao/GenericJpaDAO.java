@@ -145,4 +145,8 @@ public class GenericJpaDAO<T extends BasicEntity> implements GenericDAO<T> {
     protected final Session getHibernateSession() {
         return (Session) em.getDelegate();
     }
+
+    public EntityManager getEm() {
+        return em;
+    }
 }
